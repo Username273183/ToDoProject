@@ -107,15 +107,14 @@ if __name__ == "__main__":
     todo_manager = TodoManager()
 
     window = Tk()
+    window.geometry("450x450")
     window.title("To-Do List")
 
     # Entry for adding tasks
-    entry = Entry(window, font=("Arial", 16))
-    entry.pack(side=LEFT, padx=10)
+    entry = Entry(window, font=("Arial", 16)).grid(row=0, column=0)
 
     # Entry for removing tasks
-    entry1 = Entry(window, font=("Arial", 16))
-    entry1.pack(side=LEFT, padx=10)
+    entry1 = Entry(window, font=("Arial", 16)).grid(row=1, column=0)
 
     # Button for adding tasks
     button = Button(window,
@@ -126,8 +125,7 @@ if __name__ == "__main__":
                     bg="white",
                     activeforeground="black",
                     activebackground="white",
-                    state=ACTIVE)
-    button.pack(pady=10)
+                    state=ACTIVE).grid(row=0, column=1)
 
     # Button for removing tasks
     button2 = Button(window,
@@ -138,8 +136,7 @@ if __name__ == "__main__":
                      bg="white",
                      activeforeground="black",
                      activebackground="white",
-                     state=ACTIVE)
-    button2.pack(pady=10)
+                     state=ACTIVE).grid(row=1, column=1)
 
     # Button for showing tasks
     button3 = Button(window,
@@ -150,8 +147,7 @@ if __name__ == "__main__":
                      bg="white",
                      activeforeground="black",
                      activebackground="white",
-                     state=ACTIVE)
-    button3.pack(pady=10)
+                     state=ACTIVE).grid(row=2, column=1)
 
     window.mainloop()
 
